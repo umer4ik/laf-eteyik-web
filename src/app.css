@@ -1,0 +1,80 @@
+@import 'normalize.css';
+@import '@fontsource/roboto';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+@import '@fontsource/roboto/300.css';
+
+:root {
+  --notification-text: #fff;
+  --notification: #CC4343;
+  --settings-checkbox-bg: #005D8F;
+  --settings-checkbox-trigger: #fff;
+  --content-width: 880px;
+  --easing: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+[data-theme="BASE_LIGHT"] {
+  --base-bg: #fff;
+  --header-drop-shadow: 0px 4px 4px 0px rgba(0 0 0 / 10%);
+  --logo: #1C5C81;
+  --content-width: 880px;
+  --links: #3192C9;
+  --header-button-bg: #99DBFF;
+  --header-button-hover: #59C5FF;
+  --contrast-text: #fff;
+  --notification-text: #fff;
+  --notification: #CC4343;
+  --popover-drop-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  --header-button-active: 0px 0px 0px 2px #CBCBCB;
+  --text: #113447;
+  --settings-checkbox-bg: #005D8F;
+  --settings-checkbox-trigger: #fff;
+  --settings-checkbox-trigger-hover-shadow: 0px 0px 6px 3px #113447;
+  --settings-checkbox-trigger-active-shadow: 0px 0px 6px 4px #113447;
+  --header-linear-gradient: none;
+  --popover-linear-gradient: none;
+  --paper-drop-shadow-light: 0px 2px 4px 2px rgba(0, 0, 0, 0.09);
+  --paper-drop-shadow-hover-light:0px 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 12px 4px rgba(0, 0, 0, 0.15);
+}
+[data-theme="BASE_DARK"] {
+  --base-bg: #07090E;
+  --text: #FFFFFF;
+  --links: #4EBDFB;
+  --header-button-bg: #15425B;
+  --header-button-hover: #0A1E29;
+  --header-linear-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --header-drop-shadow: none;
+  --logo: #93C9E9;
+  --header-button-active: 0px 0px 0px 2px #494949;
+  --popover-linear-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --popover-drop-shadow: none;
+  --settings-checkbox-trigger-hover-shadow: 0px 0px 6px 3px rgba(255, 255, 255, .5);
+  --settings-checkbox-trigger-active-shadow: 0px 0px 6px 4px rgba(255, 255, 255, .5);
+  --paper-drop-shadow-light: none;
+  --paper-drop-shadow-hover-light: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 300;
+  background-color: var(--base-bg);
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--links)
+}
+b, strong {
+  font-weight: 500;
+}

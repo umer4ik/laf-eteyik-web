@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		%sveltekit.head%
-	</head>
-	<body>
-		<div>%sveltekit.body%</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <script>
+      (function () {
+        if (window && window.localStorage) {
+          var html = document.querySelector('html');
+          var theme = window.localStorage.getItem('laf-eteyik-theme');
+          if (theme && (theme === 'BASE_DARK' || theme === 'BASE_LIGHT')) {
+            html.setAttribute('data-theme', theme);
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            html.setAttribute('data-theme', 'BASE_DARK');
+          } else {
+            html.setAttribute('data-theme', 'BASE_LIGHT');
+          }
+        }
+      })();
+    </script>
+    %sveltekit.head%
+  </head>
+  <body>
+    <div id="root">%sveltekit.body%</div>
+  </body>
 </html>
