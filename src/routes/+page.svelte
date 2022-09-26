@@ -6,6 +6,7 @@
   import Paper from '../components/Paper.svelte';
   import Papers from '../components/Papers.svelte';
   import { t } from 'svelte-i18n'
+
 </script>
 
 <svelte:head>
@@ -17,7 +18,7 @@
   <b>Laf Eteyik</b> - {$t('intro')}
 </section>
 <Papers>
-  <Paper href="/phrases" title="{$t('phrases.title')}" description="{$t('phrases.description')}" />
+  <Paper href="/laf" title="{$t('phrases.title')}" description="{$t('phrases.description')}" />
 </Papers>
 <style>
   section {

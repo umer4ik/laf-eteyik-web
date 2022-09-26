@@ -36,5 +36,6 @@
   }
   .emoji {
     vertical-align: middle;
+    line-height: 1;
   }
 </style>
