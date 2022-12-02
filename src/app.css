@@ -7,6 +7,7 @@
 :root {
   --notification-text: #fff;
   --notification: #CC4343;
+  --error: #CC4343;
   --settings-checkbox-bg: #005D8F;
   --settings-checkbox-trigger: #fff;
   --content-width: 880px;
@@ -34,6 +35,11 @@
   --popover-linear-gradient: none;
   --paper-drop-shadow-light: 0px 2px 4px 2px rgba(0, 0, 0, 0.09);
   --paper-drop-shadow-hover-light:0px 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 12px 4px rgba(0, 0, 0, 0.15);
+  --table-colored-row: #F1FAFF;
+  --table-colored-row-hover: #C9E7F7;
+  --common-icon-button-border: #AAAAAA;
+  --common-icon-button-hover: #EBEBEB;
+  --common-icon-button-hover-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 [data-theme="BASE_DARK"] {
   --base-bg: #07090E;

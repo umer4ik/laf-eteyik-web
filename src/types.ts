@@ -3,14 +3,15 @@ export interface Translation {
   ru: string
 }
 
+export interface CyrLat {
+  cyr: string,
+  lat: string
+}
 export interface Laf extends Translation {
-  qt: {
-    cyr: string,
-    lat: string
-  }
+  qt: CyrLat
 }
 
-export type CategoryPlain = {
+export interface CategoryPlain {
   name: Laf,
   additionalInfo: Translation,
   description: Translation,
@@ -20,8 +21,17 @@ export type CategoryPlain = {
   phrases?: PhrasePlain[]
 }
 
-export type PhrasePlain = {
+export interface PhrasePlain {
   laf: Laf,
   categoryName: string,
   alias: string
+}
+
+export interface PhraseDetails extends PhrasePlain {
+  category: CategoryPlain,
+}
+
+export interface BreadCrumb {
+  title: string
+  href?: string
 }

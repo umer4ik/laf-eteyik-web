@@ -1,6 +1,7 @@
 <script lang="ts">
   import { t } from 'svelte-i18n'
-  let notFound = $t('not_found')
+  let notFound: string | undefined
+  $: notFound = $t('not_found')
 </script>
 
 <svelte:head>
